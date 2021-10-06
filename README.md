@@ -7,9 +7,9 @@ Casos de estudos pessoais e práticas com explicações e exemplos em código so
 
 ### 1. Padrões de Criação: ###
 
-- [Abstract Factory](https://code4coders.wordpress.com/2016/04/29/principios-de-design-patterns-em-c-abstract-factory/)
-- Padrão Builder
 - Factory Method
+- Abstract Factory
+- Padrão Builder
 - Prototype
 - Singleton
 
