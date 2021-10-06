@@ -1,4 +1,4 @@
-# Casos de Estudo Pessoal de Design Patterns em C# - Glaucia Lemos
+# Casos de Estudo Pessoal de Design Patterns em C# - Douglas Lima
 
 Casos de estudos pessoais e práticas com explicações e exemplos em código sobre Padrões de Projetos em C#
 
