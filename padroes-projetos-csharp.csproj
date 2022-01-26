@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>padroes_projetos_csharp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net5.0\padroes-projetos-csharp.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\padroes-projetos-csharp.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="2-estruturais\" />
+    <Folder Include="3-comportamentais\8-strategy\" />
+    <Folder Include="bin\Debug\net5.0\ref\" />
+    <Folder Include="obj\Debug\net5.0\ref\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.assets.cache" />
+    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\padroes-projetos-csharp.csproj.nuget.g.props" />
+    <None Include="obj\padroes-projetos-csharp.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="padroes-projetos-csharp.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+  </ItemGroup>
+
+</Project>

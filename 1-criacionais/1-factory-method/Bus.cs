@@ -1,10 +1,10 @@
 namespace FactoryMethod
 {
-  public sealed class Bus : ITransport
-  {
-    public string Build()
+    public sealed class Bus : ITransport
     {
-      return "Transporte Onibus";
+        public string Build()
+        {
+            return "Transporte Onibus";
+        }
     }
-  }
 }

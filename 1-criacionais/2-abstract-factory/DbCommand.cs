@@ -1,7 +1,7 @@
 namespace AbstractFactory
 {
-  public abstract class DbCommand
-  {
-    public abstract void Execute();
-  }
+    public abstract class DbCommand
+    {
+        public abstract void Execute();
+    }
 }

@@ -5,9 +5,9 @@ namespace AbstractFactory
     class Program
     {
         /* Client */
+        /*
         static void Main(string[] args)
         {
-            /* Aqui vamos estanciar a nossa Factory */
             DbFactory db = new SqlFactory();
 
             var con = db.CreateConnection();
@@ -18,5 +18,6 @@ namespace AbstractFactory
 
             Console.ReadLine();
         }
+        */
     }
 }

@@ -1,7 +1,7 @@
 namespace FactoryMethod
 {
-  public interface ITransport
-  {
-    string Build();
-  }
+    public interface ITransport
+    {
+        string Build();
+    }
 }

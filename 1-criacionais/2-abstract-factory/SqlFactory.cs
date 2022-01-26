@@ -1,16 +1,16 @@
 namespace AbstractFactory
 {
-  public class SqlFactory : DbFactory
-  {
-    public override DbConnection createConnection()
+    public class SqlFactory : DbFactory
     {
-      /* A classe aqui ficou encapsulada */
-      return new SqlConnection();
-    }
+        public override DbConnection CreateConnection()
+        {
+            /* A classe aqui ficou encapsulada */
+            return new SqlConnection();
+        }
 
-    public override DbCommand createCommand()
-    {
-      return new SqlCommand();
+        public override DbCommand CreateCommand()
+        {
+            return new SqlCommand();
+        }
     }
-  }
 }
