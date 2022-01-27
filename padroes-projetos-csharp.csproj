@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="obj\Debug\net5.0\padroes-projetos-csharp.csproj.FileListAbsolute.txt" />
     <Content Include="obj\padroes-projetos-csharp.csproj.nuget.dgspec.json" />
     <Content Include="obj\project.assets.json" />
   </ItemGroup>
@@ -26,16 +27,12 @@
   <ItemGroup>
     <None Include="obj\Debug\net5.0\padroes-projetos-csharp.AssemblyInfoInputs.cache" />
     <None Include="obj\Debug\net5.0\padroes-projetos-csharp.assets.cache" />
-    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net5.0\padroes-projetos-csharp.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\net5.0\padroes-projetos-csharp.GeneratedMSBuildEditorConfig.editorconfig" />
     <None Include="obj\padroes-projetos-csharp.csproj.nuget.g.props" />
     <None Include="obj\padroes-projetos-csharp.csproj.nuget.g.targets" />
     <None Include="obj\project.nuget.cache" />
     <None Include="padroes-projetos-csharp.sln" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
   </ItemGroup>
 
 </Project>
