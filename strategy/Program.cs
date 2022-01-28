@@ -74,7 +74,7 @@ namespace strategy
 
         static void Main(string[] args)
         {
-            //CalcularImpostos();
+            CalcularImpostos();
             CalcularInvestimentos();
         }
     }
