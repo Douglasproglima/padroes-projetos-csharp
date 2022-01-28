@@ -1,22 +1,19 @@
-﻿using chains_of_responsability.Impostos;
+﻿using chains_of_responsability.Descontos.Strateges;
+using chains_of_responsability.Impostos;
 
 namespace chains_of_responsability.Descontos
 {
     public class CalcularDesconto
     {
-        /*
-            Problema: muitos IF e baixa coesão na nessa.
-            Solução: Aplica o padrão Strategy
-         */
-
         public double Calcular(Orcamento orcamento)
         {
-            if (orcamento.Itens.Count > 5)
-                return orcamento.Valor * 0.1;
-            else if (orcamento.Valor > 500.0)
-                return orcamento.Valor * 0.07;
+            double desconto = new DescontoPorCincoItens().Calcular(orcamento);
+            if(desconto == 0)
+                desconto = new DescontoPorMaisDeQuinhetosReais().Calcular(orcamento);
+            else if(desconto > 5)
+                desconto  = new DescontoPorMaisDeQuinhetosReais().Calcular(orcamento) * 0.05;
 
-            return 0;
+            return desconto;
         }
     }
 }
