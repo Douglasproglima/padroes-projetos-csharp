@@ -12,7 +12,7 @@ namespace chains_of_responsability
         {
             CalcularDesconto calculador = new CalcularDesconto();
 
-            Orcamento orcamento = new Orcamento(500.00);
+            Orcamento orcamento = new Orcamento(500);
             orcamento.AdicionarItem(new Item("Caneta", 250.00));
             orcamento.AdicionarItem(new Item("Caderno", 200));
             orcamento.AdicionarItem(new Item("PC", 50.00));
