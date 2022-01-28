@@ -1,4 +1,5 @@
-﻿using chains_of_responsability.Descontos.Strateges;
+﻿using chains_of_responsability.Descontos.Interface;
+using chains_of_responsability.Descontos.Strateges;
 using chains_of_responsability.Impostos;
 
 namespace chains_of_responsability.Descontos
@@ -7,13 +8,15 @@ namespace chains_of_responsability.Descontos
     {
         public double Calcular(Orcamento orcamento)
         {
-            double desconto = new DescontoPorCincoItens().Calcular(orcamento);
-            if(desconto == 0)
-                desconto = new DescontoPorMaisDeQuinhetosReais().Calcular(orcamento);
-            else if(desconto > 5)
-                desconto  = new DescontoPorMaisDeQuinhetosReais().Calcular(orcamento) * 0.05;
+            IDesconto d1 = new DescontoPorCincoItens();
+            IDesconto d2 = new DescontoPorMaisDeQuinhetosReais();
+            IDesconto d3 = new SemDesconto();
 
-            return desconto;
+            d1.ProximoDesconto = d2;
+            d2.ProximoDesconto = d3;
+            d3.ProximoDesconto = d1;
+
+            return d1.RetornarDesconto(orcamento);
         }
     }
 }

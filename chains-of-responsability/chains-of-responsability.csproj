@@ -6,8 +6,4 @@
     <RootNamespace>chains_of_responsability</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Descontos\Interface\" />
-  </ItemGroup>
-
 </Project>
