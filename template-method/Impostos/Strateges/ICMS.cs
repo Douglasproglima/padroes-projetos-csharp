@@ -2,7 +2,7 @@
 
 namespace template_method.Impostos.Strateges
 {
-    internal class ICMS : IImposto
+    public class ICMS : IImposto
     {
         public double Calcular(Orcamento orcamento)
         {
