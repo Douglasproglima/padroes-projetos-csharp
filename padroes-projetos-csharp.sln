@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "padroes-projetos-csharp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "strategy", "strategy\strategy.csproj", "{1160B252-9AAF-40DD-B4AF-1F98AD05FB8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chains-of-responsability", "chains-of-responsability\chains-of-responsability.csproj", "{422B94F6-47BD-4A56-B132-9628FE590BD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chains-of-responsability", "chains-of-responsability\chains-of-responsability.csproj", "{422B94F6-47BD-4A56-B132-9628FE590BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template-method", "..\template-method\template-method.csproj", "{4435BE77-B4F8-4E87-A4D8-742E526D050B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{422B94F6-47BD-4A56-B132-9628FE590BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422B94F6-47BD-4A56-B132-9628FE590BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422B94F6-47BD-4A56-B132-9628FE590BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4435BE77-B4F8-4E87-A4D8-742E526D050B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4435BE77-B4F8-4E87-A4D8-742E526D050B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4435BE77-B4F8-4E87-A4D8-742E526D050B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4435BE77-B4F8-4E87-A4D8-742E526D050B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
