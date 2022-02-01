@@ -1,29 +1,22 @@
-﻿using System.Linq;
-using template_method.Impostos.Interface;
+﻿using template_method.Impostos.TemplateAlgorithm;
 
 namespace template_method.Impostos.Strateges
 {
-    public class ICPP : IImposto
+    public class ICPP : TemplateImpostoCondicional
     {
-        public double Calcular(Orcamento orcamento)
+        public override bool UsarTaxaMaxima(Orcamento orcamento)
         {
-            if (orcamento.Valor > 500 && existeItemMaior500Reais(orcamento))
-                return orcamento.Valor * 0.1;
-            else
-                return orcamento.Valor * 0.06;
+            return orcamento.Valor >= 500;
         }
 
-        private bool existeItemMaior500Reais(Orcamento orcamento)
+        public override double RetornarTaxaMaxima(Orcamento orcamento)
         {
-            bool retorno = false;
+            return orcamento.Valor * 0.07;
+        }
 
-            var itensMaior100 = from itens in orcamento.Itens
-                                where itens.Valor > 100
-                                select itens;
-
-            retorno = itensMaior100.Count() > 0;
-
-            return retorno;
+        public override double RetornarTaxaMinima(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.05;
         }
     }
 }
