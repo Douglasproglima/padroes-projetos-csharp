@@ -1,9 +1,13 @@
-﻿using decorator.Impostos.TemplateAlgorithm;
+﻿using decorator.Impostos.Interface;
+using decorator.Impostos.TemplateAlgorithm;
 
 namespace decorator.Impostos.Strateges
 {
     public class ICPP : TemplateImpostoCondicional
     {
+        public ICPP(Imposto imposto) : base(imposto) { }
+        public ICPP() : base() { }
+
         public override bool UsarTaxaMaxima(Orcamento orcamento)
         {
             return orcamento.Valor >= 500;

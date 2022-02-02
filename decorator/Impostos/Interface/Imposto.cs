@@ -19,9 +19,7 @@
 
         protected double CalcularOutroImposto(Orcamento orcamento)
         {
-            if (OutroImposto == null) return 0;
-
-            return OutroImposto.Calcular(orcamento);
+            return OutroImposto == null ? 0 : OutroImposto.Calcular(orcamento);
         }
     }
 }

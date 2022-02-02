@@ -1,10 +1,14 @@
 ﻿using System.Linq;
+using decorator.Impostos.Interface;
 using decorator.Impostos.TemplateAlgorithm;
 
 namespace decorator.Impostos.Strateges
 {
     public class IKCV : TemplateImpostoCondicional
     {
+        public IKCV(Imposto imposto) : base(imposto) { }
+        public IKCV() : base() { }
+
         public override bool UsarTaxaMaxima(Orcamento orcamento)
         {
             return orcamento.Valor > 500 && this.ExisteItemMaior100Reais(orcamento);
@@ -12,7 +16,7 @@ namespace decorator.Impostos.Strateges
 
         public override double RetornarTaxaMaxima(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.10 + OutroImposto.Calcular(orcamento);
+            return orcamento.Valor * 0.10;
         }
 
         public override double RetornarTaxaMinima(Orcamento orcamento)
