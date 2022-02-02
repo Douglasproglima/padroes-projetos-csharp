@@ -2,9 +2,12 @@
 
 namespace decorator.Impostos.TemplateAlgorithm
 {
-    public abstract class TemplateImpostoCondicional : IImposto
+    public abstract class TemplateImpostoCondicional : Imposto
     {
-        public double Calcular(Orcamento orcamento)
+        public TemplateImpostoCondicional(Imposto outroImposto) : base(outroImposto) { }
+        public TemplateImpostoCondicional() : base() { }
+
+        public override double Calcular(Orcamento orcamento)
         {
             if (UsarTaxaMaxima(orcamento))
                 return RetornarTaxaMaxima(orcamento);

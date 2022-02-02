@@ -2,9 +2,9 @@
 
 namespace decorator.Impostos.Strateges
 {
-    public class ICCC : IImposto
+    public class ICCC : Imposto
     {
-        public double Calcular(Orcamento orcamento)
+        public override double Calcular(Orcamento orcamento)
         {
             double valor = 0;
 

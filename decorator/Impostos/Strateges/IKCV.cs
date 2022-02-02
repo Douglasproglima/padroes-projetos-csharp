@@ -12,7 +12,7 @@ namespace decorator.Impostos.Strateges
 
         public override double RetornarTaxaMaxima(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.10;
+            return orcamento.Valor * 0.10 + OutroImposto.Calcular(orcamento);
         }
 
         public override double RetornarTaxaMinima(Orcamento orcamento)
