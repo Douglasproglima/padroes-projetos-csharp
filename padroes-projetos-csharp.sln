@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "strategy", "strategy\strate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "chains-of-responsability", "chains-of-responsability\chains-of-responsability.csproj", "{422B94F6-47BD-4A56-B132-9628FE590BD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template-method", "template-method\template-method.csproj", "{5D79C5D3-3F3C-43DF-9C5D-DFEDB4FC4639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "template-method", "template-method\template-method.csproj", "{5D79C5D3-3F3C-43DF-9C5D-DFEDB4FC4639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decorator", "decorator\decorator.csproj", "{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5D79C5D3-3F3C-43DF-9C5D-DFEDB4FC4639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D79C5D3-3F3C-43DF-9C5D-DFEDB4FC4639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D79C5D3-3F3C-43DF-9C5D-DFEDB4FC4639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
