@@ -2,11 +2,15 @@
 using System.Linq;
 using System.Collections.Generic;
 using decorator.Impostos.TemplateAlgorithm;
+using decorator.Impostos.Interface;
 
 namespace decorator.Impostos.Strateges
 {
     public class IHIT : TemplateImpostoCondicional
     {
+        public IHIT(Imposto outroImposto) : base(outroImposto) { }
+        public IHIT() : base() { }
+
         public override double RetornarTaxaMaxima(Orcamento orcamento)
         {
             return (orcamento.Valor * 0.13) + 100;

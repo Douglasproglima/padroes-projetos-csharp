@@ -10,7 +10,15 @@ namespace decorator
         static void Main(string[] args)
         {
             //Decorator -> Umm objeto que precisa calcular vários impostos agrupados.
-            Imposto iss = new ISS(new ICMS(new ImpostoMuitoAlto(new ICPP())));
+            Imposto iss = new ISS(
+                new ICMS(
+                    new ImpostoMuitoAlto(
+                        new ICPP(
+                            new ICCC()
+                        )
+                    )
+                )
+            );
             Orcamento orcamento = new Orcamento(500);
 
             double valor = iss.Calcular(orcamento);

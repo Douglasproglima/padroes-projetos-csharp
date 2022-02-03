@@ -10,7 +10,7 @@ namespace decorator.Impostos.TemplateAlgorithm
         public override double Calcular(Orcamento orcamento)
         {
             if (UsarTaxaMaxima(orcamento))
-                return RetornarTaxaMaxima(orcamento);
+                return RetornarTaxaMaxima(orcamento) + OutroImposto.Calcular(orcamento);
             else
                 return RetornarTaxaMinima(orcamento);
         }

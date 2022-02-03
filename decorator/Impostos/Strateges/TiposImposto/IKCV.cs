@@ -6,7 +6,7 @@ namespace decorator.Impostos.Strateges
 {
     public class IKCV : TemplateImpostoCondicional
     {
-        public IKCV(Imposto imposto) : base(imposto) { }
+        public IKCV(Imposto outroImposto) : base(outroImposto) { }
         public IKCV() : base() { }
 
         public override bool UsarTaxaMaxima(Orcamento orcamento)
