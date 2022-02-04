@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace decorator.Impostos.Strateges
+namespace state.Impostos.Strateges
 {
     public abstract class Filtro
     {
