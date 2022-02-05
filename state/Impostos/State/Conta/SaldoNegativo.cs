@@ -9,7 +9,7 @@ namespace state.Impostos.State.Conta
         {
             conta.Saldo += valor * 0.95;
             if (conta.Saldo > 0) 
-                conta.Status = new SaldoPositivo();
+                conta.StatusConta = new SaldoPositivo();
         }
 
         public void Sacar(Impostos.Conta conta, double valor)

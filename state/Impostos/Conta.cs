@@ -5,7 +5,7 @@ namespace state.Impostos
 {
     public class Conta
     {
-        protected IStatusConta StatusConta;
+        public IStatusConta StatusConta;
         public double Saldo { get; set; }
         public DateTime DataAberturaConta { get; set; }
 

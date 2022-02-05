@@ -14,7 +14,7 @@ namespace state.Impostos.State.Conta
             conta.Saldo -= valor;
 
             if (conta.Saldo <= 0) 
-                conta.Status = new SaldoNegativo();
+                conta.StatusConta = new SaldoNegativo();
         }
     }
 }
