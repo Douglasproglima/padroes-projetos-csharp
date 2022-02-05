@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "template-method", "template
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "decorator", "decorator\decorator.csproj", "{172F64E3-9FC2-4D39-A4BA-82CC0B4D91C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "state", "state\state.csproj", "{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "state", "state\state.csproj", "{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builder", "builder\builder.csproj", "{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
