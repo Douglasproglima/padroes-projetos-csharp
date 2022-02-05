@@ -18,31 +18,36 @@ namespace builder
             return new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Imposto, Itens, Observacao);
         }
 
-        public void InserirRazaoSocial(String razaoSocial)
+        public NotaFiscalBuilder InserirRazaoSocial(String razaoSocial)
         {
             this.RazaoSocial = razaoSocial;
+            return this;
         }
 
-        public void InserirCNPJ(String cnpj)
+        public NotaFiscalBuilder InserirCNPJ(String cnpj)
         {
             this.Cnpj = cnpj;
+            return this;
         }
 
-        public void InserirItem(ItemNota item)
+        public NotaFiscalBuilder InserirItem(ItemNota item)
         { 
             this.Itens.Add(item);
             this.ValorTotal += item.Valor;
             this.Imposto = item.Valor * 0.05;
+            return this;
         }
 
-        public void InserirObs(string observacao)
+        public NotaFiscalBuilder InserirObs(string observacao)
         { 
             this.Observacao = observacao;
+            return this;
         }
 
-        public void DataAtual()
+        public NotaFiscalBuilder DataAtual()
         { 
             this.Data = DateTime.Now;
+            return this;
         }
     }
 }

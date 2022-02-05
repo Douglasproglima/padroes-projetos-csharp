@@ -9,14 +9,14 @@ namespace builder
         static void Main(string[] args)
         {
             NotaFiscalBuilder criarNf = new NotaFiscalBuilder();
-            criarNf.InserirRazaoSocial("Minha Empresa");
-            criarNf.InserirCNPJ("45.563.289/0001-95");
-            criarNf.InserirItem(new ItemNota("Item 1", 55.68));
-            criarNf.InserirItem(new ItemNota("Item 2", 105.01));
-            criarNf.InserirItem(new ItemNota("Item 3", 75.65));
-            criarNf.InserirItem(new ItemNota("Item 4", 10.34));
-            criarNf.InserirObs("Uma observação qualquer");
-            criarNf.DataAtual();
+            criarNf.InserirRazaoSocial("Minha Empresa")
+                   .InserirCNPJ("45.563.289/0001-95")
+                   .InserirItem(new ItemNota("Item 1", 55.68))
+                   .InserirItem(new ItemNota("Item 2", 105.01))
+                   .InserirItem(new ItemNota("Item 3", 75.65))
+                   .InserirItem(new ItemNota("Item 4", 10.34))
+                   .InserirObs("Uma observação qualquer")
+                   .DataAtual();
 
             NotaFiscal nf = criarNf.CriarNF();
 
