@@ -1,22 +1,29 @@
-﻿using state.Impostos.Interface;
-using System;
+﻿using System;
 
 namespace state.Impostos
 {
     public class Conta
     {
-        public IStatusConta StatusConta;
-        public double Saldo { get; set; }
+        interface IStatusConta
+        {
+            void Depositar(Conta conta, double valor);
+            void Sacar(Conta conta, double valor);
+        }
+
+        class SaldoNegativo : IStatusConta
+        {
+            public void Depositar(Conta conta, double valor)
+            {
+                conta.Saldo += valor;
+            }
+
+            public void Sacar(Conta conta, double valor)
+            {
+                conta.Saldo -= valor;
+            }
+        }
+
+        public double Saldo { get; private set; }
         public DateTime DataAberturaConta { get; set; }
-
-        public void Depositar(double valor)
-        {
-            StatusConta.Depositar(this, valor);
-        }
-
-        public void Sacar(double valor)
-        {
-            StatusConta.Sacar(this, valor);
-        }
     }
 }
