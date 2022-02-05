@@ -20,7 +20,7 @@ namespace state
         {
             Orcamento reforma = new Orcamento(500);
             
-            Console.WriteLine(reforma.Valor);
+            Console.WriteLine($"Orçamento Inicial: {reforma.Valor}");
             
             reforma.AplicarDescontoExtra();
             Console.WriteLine("Valor do Orçamento Aprovado: " + reforma.Valor);

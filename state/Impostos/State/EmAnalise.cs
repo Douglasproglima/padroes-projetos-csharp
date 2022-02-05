@@ -5,9 +5,17 @@ namespace state.Impostos.State
 {
     public class EmAnalise : IStatusOrcamento
     {
+        private bool descontoFoiAplicado = false;
+
         public void AplicarDescontoExtra(Orcamento orcamento)
         {
-            orcamento.Valor -= orcamento.Valor * 0.05;
+            if (descontoFoiAplicado)
+                throw new Exception("O desconto já foi aplicado para orçamento Aprovado.");
+            else
+            {
+                orcamento.Valor -= orcamento.Valor * 0.05;
+                descontoFoiAplicado = false;
+            }
         }
 
         public void Aprovar(Orcamento orcamento)

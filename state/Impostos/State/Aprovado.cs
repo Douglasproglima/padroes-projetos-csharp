@@ -5,9 +5,16 @@ namespace state.Impostos.State
 {
     public class Aprovado : IStatusOrcamento
     {
+        private bool descontoFoiAplicado = false;
         public void AplicarDescontoExtra(Orcamento orcamento)
         {
-            orcamento.Valor -= orcamento.Valor * 0.02;
+            if (!descontoFoiAplicado)
+                throw new Exception("O desconto já foi aplicado para orçamento Aprovado.");
+            else
+            { 
+                orcamento.Valor -= orcamento.Valor * 0.02;
+                descontoFoiAplicado = true;
+            }
         }
 
         public void Aprovar(Orcamento orcamento)

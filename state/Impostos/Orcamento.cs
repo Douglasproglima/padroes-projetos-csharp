@@ -13,6 +13,7 @@ namespace state.Impostos
 
         public Orcamento(double valor)
         {
+            this.StatuAtual = new EmAnalise();
             this.Valor = valor;
             this.Itens = new List<Item>();
             this.StatuAtual = new EmAnalise();
