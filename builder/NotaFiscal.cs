@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace builder
 {
@@ -14,7 +15,7 @@ namespace builder
         public String Observacoes { get; private set; }
 
         public NotaFiscal(String razaoSocial, String cnpj, DateTime dataDeEmissao,
-                  double valorBruto, double impostos, IList<ItemNota> itens, String observacoes)
+                          double valorBruto, double impostos, IList<ItemNota> itens, String observacoes)
         {
             this.RazaoSocial = razaoSocial;
             this.Cnpj = cnpj;
@@ -23,6 +24,22 @@ namespace builder
             this.Imposto = impostos;
             this.Itens = itens;
             this.Observacoes = observacoes;
+        }
+
+        public string ShowNotaFiscal()
+        {
+            Util util = new Util();
+            string itens = string.Empty;
+
+            foreach (var item in Itens)
+            {
+                itens += item.ShowItem()+"\n";
+            }
+
+
+            string nf = $"Empresa: {RazaoSocial}\nCNPJ: {Cnpj}\nData Emissão: {DataDeEmissao}\nValor Total: {util.FormatarValor(ValorBruto)}\nImposto: {Imposto}\nObservações: {Observacoes}\n\n{itens}";
+
+            return nf;
         }
     }
 }

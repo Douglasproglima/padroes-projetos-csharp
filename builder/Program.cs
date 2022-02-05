@@ -20,7 +20,7 @@ namespace builder
 
             NotaFiscal nf = criarNf.CriarNF();
 
-            Console.WriteLine($"Empresa: {nf.RazaoSocial}\nCNPJ: {nf.Cnpj}");
+            Console.WriteLine(nf.ShowNotaFiscal());
             Console.ReadKey();
         }
     }
