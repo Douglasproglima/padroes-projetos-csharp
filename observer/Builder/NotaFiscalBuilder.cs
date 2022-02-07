@@ -14,7 +14,12 @@ namespace observer
         public DateTime Data { get; private set; }
         private String observacao;
         private IList<ItemNota> itens = new List<ItemNota>();
-        private IList<IAcaoAposGerarNF> todasAcoesNF = new List<IAcaoAposGerarNF>();
+        private IList<IAcaoAposGerarNF> todasAcoesNF;
+
+        public NotaFiscalBuilder()
+        { 
+            this.todasAcoesNF = new List<IAcaoAposGerarNF>();
+        }
 
         public NotaFiscal CriarNF()
         {

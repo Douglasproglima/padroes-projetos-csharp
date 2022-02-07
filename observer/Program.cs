@@ -27,6 +27,7 @@ namespace observer
             criarNf.AdicionarAcaoNotaFiscal(new EnviarEmail());
             criarNf.AdicionarAcaoNotaFiscal(new EnviarSMS());
             criarNf.AdicionarAcaoNotaFiscal(new NotaFiscalDao());
+            criarNf.AdicionarAcaoNotaFiscal(new ImprimirRelatorio(3));
 
             NotaFiscal nf = criarNf.CriarNF();
 
