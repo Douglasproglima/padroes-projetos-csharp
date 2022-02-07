@@ -1,4 +1,5 @@
-﻿using System;
+﻿using observer.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace observer
@@ -17,26 +18,11 @@ namespace observer
         {
             NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Imposto, Itens, Observacao);
 
-            this.SalvarNota();
-            this.EnviarEmail();
-            this.EnviarSMS();
+            new NotaFiscalDao().SalvarNota(nf);
+            new EnviarEmail().EnviarPorEmail(nf);
+            new EnviarSMS().EnviarPorSMS(nf);
 
             return nf;
-        }
-
-        public void EnviarEmail()
-        {
-            Console.WriteLine("Simulando envio do e-mail.");
-        }
-
-        public void EnviarSMS()
-        {
-            Console.WriteLine("Simulando envio do SMS.");
-        }
-
-        public void SalvarNota()
-        {
-            Console.WriteLine("Simulando insert no BD.");
         }
 
         public NotaFiscalBuilder InserirRazaoSocial(String razaoSocial)
