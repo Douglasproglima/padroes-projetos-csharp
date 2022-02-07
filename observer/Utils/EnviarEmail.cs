@@ -1,10 +1,11 @@
-﻿using System;
+﻿using observer.Interface;
+using System;
 
 namespace observer.Utils
 {
-    public class EnviarEmail
+    public class EnviarEmail : IAcaoAposGerarNF
     {
-        public void EnviarPorEmail(NotaFiscal nf)
+        public void ExecutarAcao(NotaFiscal nf)
         {
             Console.WriteLine("Simulando envio do e-mail.");
         }

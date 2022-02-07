@@ -18,9 +18,9 @@ namespace observer
         {
             NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Imposto, Itens, Observacao);
 
-            new NotaFiscalDao().SalvarNota(nf);
-            new EnviarEmail().EnviarPorEmail(nf);
-            new EnviarSMS().EnviarPorSMS(nf);
+            new NotaFiscalDao().ExecutarAcao(nf);
+            new EnviarEmail().ExecutarAcao(nf);
+            new EnviarSMS().ExecutarAcao(nf);
 
             return nf;
         }

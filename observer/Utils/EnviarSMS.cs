@@ -1,10 +1,11 @@
-﻿using System;
+﻿using observer.Interface;
+using System;
 
 namespace observer.Utils
 {
-    public class EnviarSMS
+    public class EnviarSMS : IAcaoAposGerarNF
     {
-        public void EnviarPorSMS(NotaFiscal nf)
+        public void ExecutarAcao(NotaFiscal nf)
         {
             Console.WriteLine("Simulando envio do SMS.");
         }
