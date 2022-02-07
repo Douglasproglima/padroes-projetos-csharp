@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "decorator", "decorator\deco
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "state", "state\state.csproj", "{57ED87E4-4E91-4D1A-9E6C-41E0F3CD464E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builder", "builder\builder.csproj", "{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "builder", "builder\builder.csproj", "{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "observer", "observer\observer.csproj", "{44BE77BB-E9E7-4777-91A7-91CB89BF7295}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD96FD9-528D-4A0C-9F13-8FDAC3285515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BE77BB-E9E7-4777-91A7-91CB89BF7295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BE77BB-E9E7-4777-91A7-91CB89BF7295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BE77BB-E9E7-4777-91A7-91CB89BF7295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BE77BB-E9E7-4777-91A7-91CB89BF7295}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
