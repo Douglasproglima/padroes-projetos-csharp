@@ -1,4 +1,5 @@
-﻿using System;
+﻿using observer.Utils;
+using System;
 
 namespace observer
 {
@@ -23,7 +24,12 @@ namespace observer
                    .InserirObs("Uma observação qualquer")
                    .DataAtual();
 
+            criarNf.AdicionarAcaoNotaFiscal(new EnviarEmail());
+            criarNf.AdicionarAcaoNotaFiscal(new EnviarSMS());
+            criarNf.AdicionarAcaoNotaFiscal(new NotaFiscalDao());
+
             NotaFiscal nf = criarNf.CriarNF();
+
 
             Console.WriteLine(nf.ShowNotaFiscal());
             Console.ReadKey();

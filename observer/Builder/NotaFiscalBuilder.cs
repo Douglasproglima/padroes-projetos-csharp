@@ -1,4 +1,5 @@
-﻿using observer.Utils;
+﻿using observer.Interface;
+using observer.Utils;
 using System;
 using System.Collections.Generic;
 
@@ -6,23 +7,28 @@ namespace observer
 {
     public class NotaFiscalBuilder
     {
-        private String RazaoSocial;
-        private String Cnpj;
-        private double ValorTotal;
-        private double Imposto;
-        private DateTime Data;
-        private String Observacao;
-        private IList<ItemNota> Itens = new List<ItemNota>();
+        public String RazaoSocial { get; private set; }
+        public String Cnpj { get; private set; }
+        public double ValorTotal { get; private set; }
+        public double Imposto { get; private set; }
+        public DateTime Data { get; private set; }
+        private String observacao;
+        private IList<ItemNota> itens = new List<ItemNota>();
+        private IList<IAcaoAposGerarNF> todasAcoesNF = new List<IAcaoAposGerarNF>();
 
         public NotaFiscal CriarNF()
         {
-            NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Imposto, Itens, Observacao);
+            NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Imposto, itens, observacao);
 
-            new NotaFiscalDao().ExecutarAcao(nf);
-            new EnviarEmail().ExecutarAcao(nf);
-            new EnviarSMS().ExecutarAcao(nf);
+            foreach (IAcaoAposGerarNF acaoAposGerarNF in todasAcoesNF)
+                acaoAposGerarNF.ExecutarAcao(nf);
 
             return nf;
+        }
+
+        public void AdicionarAcaoNotaFiscal(IAcaoAposGerarNF novaAcao)
+        { 
+            this.todasAcoesNF.Add(novaAcao);
         }
 
         public NotaFiscalBuilder InserirRazaoSocial(String razaoSocial)
@@ -39,7 +45,7 @@ namespace observer
 
         public NotaFiscalBuilder InserirItem(ItemNota item)
         { 
-            this.Itens.Add(item);
+            this.itens.Add(item);
             this.ValorTotal += item.Valor;
             this.Imposto = item.Valor * 0.05;
             return this;
@@ -47,7 +53,7 @@ namespace observer
 
         public NotaFiscalBuilder InserirObs(string observacao)
         { 
-            this.Observacao = observacao;
+            this.observacao = observacao;
             return this;
         }
 
