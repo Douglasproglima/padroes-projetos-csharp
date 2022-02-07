@@ -14,7 +14,11 @@ namespace observer.Utils
 
         public void ExecutarAcao(NotaFiscal nf)
         {
-            Console.WriteLine("Simulando Relatório, Valor da Nota:" + nf.ValorBruto+ " | Fato de Multiplicação: " + this.Fator + "\nValor Atualizado: " + nf.ValorBruto  * Fator+"\n\n");
+            Util util = new Util();
+            Console.WriteLine(
+                "Simulando Relatório, Valor da Nota:" + 
+                util.FormatarValor(nf.ValorBruto)+ " | Fato de Multiplicação: " + this.Fator + "\n" +
+                "Valor Atualizado: " + util.FormatarValor(nf.ValorBruto  * Fator)+"\n\n");
         }
     }
 }

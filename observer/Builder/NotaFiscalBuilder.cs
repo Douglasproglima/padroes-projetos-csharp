@@ -16,9 +16,9 @@ namespace observer
         private IList<ItemNota> itens = new List<ItemNota>();
         private IList<IAcaoAposGerarNF> todasAcoesNF;
 
-        public NotaFiscalBuilder()
+        public NotaFiscalBuilder(IList<IAcaoAposGerarNF> _todasAcoes)
         { 
-            this.todasAcoesNF = new List<IAcaoAposGerarNF>();
+            this.todasAcoesNF = _todasAcoes;
         }
 
         public NotaFiscal CriarNF()

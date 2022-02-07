@@ -1,5 +1,7 @@
-﻿using observer.Utils;
+﻿using observer.Interface;
+using observer.Utils;
 using System;
+using System.Collections.Generic;
 
 namespace observer
 {
@@ -14,7 +16,14 @@ namespace observer
          */
         static void Main(string[] args)
         {
-            NotaFiscalBuilder criarNf = new NotaFiscalBuilder();
+            IList<IAcaoAposGerarNF> acoes = new List<IAcaoAposGerarNF>();
+            acoes.Add(new EnviarEmail());
+            acoes.Add(new EnviarSMS());
+            acoes.Add(new NotaFiscalDao());
+            acoes.Add(new ImprimirRelatorio(3));
+
+
+            NotaFiscalBuilder criarNf = new NotaFiscalBuilder(acoes);
             criarNf.InserirRazaoSocial("Minha Empresa")
                    .InserirCNPJ("45.563.289/0001-95")
                    .InserirItem(new ItemNota("Item 1", 55.68))
@@ -24,10 +33,12 @@ namespace observer
                    .InserirObs("Uma observação qualquer")
                    .DataAtual();
 
+            /*
             criarNf.AdicionarAcaoNotaFiscal(new EnviarEmail());
             criarNf.AdicionarAcaoNotaFiscal(new EnviarSMS());
             criarNf.AdicionarAcaoNotaFiscal(new NotaFiscalDao());
             criarNf.AdicionarAcaoNotaFiscal(new ImprimirRelatorio(3));
+            */
 
             NotaFiscal nf = criarNf.CriarNF();
 
